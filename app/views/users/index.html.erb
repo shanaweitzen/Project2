@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Dem users</h1>
+
+		<p class="float_right">
+			<%= link_to "Add a User"
+		<table class="table">
+			<tbody>
+				<% @users.each do |user| %>
+				<tr>
+					<td><%= link_to user.email, user %></td>
+					<td>
+						<%= link_to "delete", user, method: :delete, confirm: "Are you sure?" %>
+					</td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+
+

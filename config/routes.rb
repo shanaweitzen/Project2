@@ -1,4 +1,37 @@
 Project2::Application.routes.draw do
+  get "privacy" => "site#privacy"
+  get "terms" => "site#terms"
+  
+  resource :session , only: [ :new, :create, :destroy ]
+  
+  get "login" => "session#new"
+  post "login" => "session#create"
+  delete "logout" => "session#destroy"
+  get "logout" => "session#destroy"
+  
+  resources :users
+  
+  root 'site#index'
+end
+
+
+
+# Project2::Application.routes.draw do
+#   get "privacy" => "site#privacy"
+#   get "terms" => "site#terms"
+
+
+#   resources :users
+  # get "users/index"
+  # get "users/show"
+  # get "users/new"
+  # get "users/edit"
+  # get "site/index"
+  # get "site/privacy"
+  # get "site/terms"
+  # get "login" => "session#new"
+  # post "login" => "session#create"
+  # delete "logout" => "session#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +86,4 @@ Project2::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+# end
