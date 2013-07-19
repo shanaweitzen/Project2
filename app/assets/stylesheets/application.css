@@ -5,7 +5,7 @@
  */
  /**= require foundation_and_overrides*/
 */
-
+/*
 @mixin inset-shadow($active:true) {
   @if $experimental {
     -webkit-box-shadow: $shiny-edge-size $shiny-edge-color inset;
@@ -17,4 +17,4 @@
       -webkit-box-shadow: $shiny-edge-size $shiny-edge-active-color inset;
     }
     box-shadow: $shiny-edge-size $shiny-edge-active-color inset; } }
-}
+}*/

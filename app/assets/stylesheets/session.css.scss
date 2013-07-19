@@ -1,3 +1,26 @@
 // Place all the styles related to the session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#body {
+	background: #153450/*#192823*/;
+  background: url('radial-gradient.png') 50% 50% no-repeat;
+  background: radial-gradient(#153450, #fff);
+	/*background: -webkit-gradient(linear, left top, left bottom, from(#9C9F84), to(#000));
+	background: -moz-linear-gradient(top, #9C9F84, #000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9C9F84', endColorstr='#000000');
+	background: #9C9F84;*/
+}
+/*#9C9F84*/
+
+#slider {
+	text-align: center;
+}
+p {
+	color: #fff;
+}
+
+h2 {
+	text-align: center;
+	color: #fff;
+}
