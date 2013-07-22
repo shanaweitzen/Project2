@@ -5,7 +5,7 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
- $body-bg: #192823;
+ // $body-bg: #192823;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -64,8 +64,8 @@
 //
 
 // We use this to control the maximum number of block grid elements per row
-// $block-grid-elements: 12;
-// $block-grid-default-spacing: 10px;
+$block-grid-elements: 12;
+$block-grid-default-spacing: 10px;
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
@@ -807,23 +807,23 @@
 //
 
 // We use this to control padding.
-// $side-nav-padding: emCalc(14px) 0;
+$side-nav-padding: emCalc(14px) 0;
 
 // We use these to control list styles.
-// $side-nav-list-type: none;
-// $side-nav-list-position: inside;
-// $side-nav-list-margin: 0 0 emCalc(7px) 0;
+$side-nav-list-type: none;
+$side-nav-list-position: inside;
+$side-nav-list-margin: 0 0 emCalc(7px) 0;
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
-// $side-nav-link-color-active: lighten(#000, 30%);
-// $side-nav-font-size: emCalc(14px);
-// $side-nav-font-weight: bold;
+$side-nav-link-color: $primary-color;
+$side-nav-link-color-active: lighten(#000, 30%);
+$side-nav-font-size: emCalc(14px);
+$side-nav-font-weight: bold;
 
 // We use these to control border styles
-// $side-nav-divider-size: 1px;
-// $side-nav-divider-style: solid;
-// $side-nav-divider-color: darken(#fff, 10%);
+$side-nav-divider-size: 1px;
+$side-nav-divider-style: solid;
+$side-nav-divider-color: darken(#fff, 10%);
 
 //
 // Sub Nav Variables

@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>	
+    <script src="/js/custom.modernizr.js"></script>
 		<link rel="stylesheet" href="session.css.scss">
 	</head>
 <body>
   <div id="body">
-	<div class="row">
-    <!-- <div class="large-3 columns"> -->
-      <h2>Welcome to Yawning Llama! Travel Security and News at your fingertips!</h2>
-  <!--   </div>
-    <div class="large-9 columns">
+    <div class="row">
+    <div class="small-12 columns">
+      <h1>Trek it!</h1>
+    <div class="small-3 large-9 columns">
       <ul class="right button-group">
-    	<li><a href="#" class="button">Link 1</a></li>
-    	<li><a href="#" class="button">Link 2</a></li>
-    	<li><a href="#" class="button">Link 3</a></li>
-    	<li><a href="#" class="button">Link 4</a></li>
-    	</ul>
-     </div> -->
-   </div>
-  
-<!-- End Header and Nav -->
-
-<!-- First Band (Slider) -->
- <ul data-orbit>
-  <li>
-    <%= image_tag("peaceful_lake.jpg") %>
-    <div class="orbit-caption">...</div>
-  </li>
-  <li>
-    <%= image_tag("machu.jpg") %>
-    <div class="orbit-caption">...</div>
-  </li>
-  <li>
-    <img src="../img/demos/demo3.jpg" />
-    <div class="orbit-caption">...</div>
-  </li>
-</ul>
- <!--  <div class="row">
-    <div class="large-12 columns"> 
-    <hr />
+      <li><a href="#" class="button">About Us</a></li>
+      <li><a href="#" class="button">API's</a></li>
+      <li><a href="#" class="button">Supported Countries</a></li>
+      </ul>
+     </div>
     </div>
-  </div> -->
+  </div>
+<!-- End Header/Title -->
+
+ <!-- Orbit Photo Slider Panel -->
+<div class="row">
+  <div class="large-8 columns">
+    <div class="panel">
+      <div id="orbit_slider">
+        <ul data-orbit>
+          <li>
+            <%= image_tag("peaceful_lake.jpg") %>
+            <div class="orbit-caption">Use Trek It No Matter Where You Are</div>
+          </li>
+          <li>
+            <%= image_tag("machu.jpg") %>
+            <div class="orbit-caption">Share Pictures and Notes with Friends and Family</div>
+          </li>
+          <li>
+            <%= image_tag("nice_dinner.jpg") %>
+            <div class="orbit-caption">Allow us to remember dinner recommendations!</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of Orbit Photo Slider Panel -->
+
+  <!-- Left-aligned sidebar Lost Password -->
+  <div class="small-12 large-2 columns">
+    <h2>Lost password?</h2>
+    <p>
+      Simply leave the password field blank, click the Log In button, and we'll send you a coded link via email allowing you to reset your password.
+    </p>
+    <br>
+    <p>Log In</p>                    
+    <form action="/login" method="POST">
+      <div class="small-12 large-2 columns">
+        <input type="text" id="email" name="email" placeholder="Email address" class="large-4 columns clear">
+      </div>
+      <div class="small-12 large-2 columns">
+        <input type="password" id="password" name="password" placeholder="Password" class="large-4 columns">&nbsp;
+      <button id ="toggle-password-field" class="small button alert"> Show Password </button>
+      </div>
+    <div class="small-12 large-2 columns">
+      <input type="submit" value="Log In" class="small button">
+    </div>        
+  </form>
+  </div>
+</div>
+</div>
 
   <!-- Three-up Content Blocks -->
  
@@ -86,54 +113,28 @@
       </div>
       
     </div>
-  </div>
- 
-  <!-- Footer -->
-  
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-6 columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> 
-  </footer>
+  </div> 
 
-<div class="row">
-	<div class="large-4 columns">
-		<h2>Lost password?</h2>
-		<p>
-			Lost your password? Simply leave the password field blank and click the Log In button and we'll send you a coded link via email that will let you reset your password.
-		</p>
-	</div>
-	<div class="large-8 columns">
-		<h1>Log In</h1>
+<!-- Check for Zepto support, load jQuery if necessary -->
+<script>
+  document.write('<script src=/js/vendor/'
+    + ('__proto__' in {} ? 'zepto' : 'jquery')
+    + '.js><\/script>');
+</script>
 
+<!-- JS plugins for Foundation CSS, recommended to be at the end of doc.-->
+<script src="/js/foundation.js"></script>
+<script src="/js/foundation.alerts.js"></script>
 
-	<form action="/login" method="POST">
-		<div class="large-12 columns">
-			<input type="text" id="email" name="email" placeholder="Email address" class="large-4 columns clear">
-		</div>
-		<div class="large-12 columns">
-			<input type="password" id="password" name="password" placeholder="Password" class="large-4 columns">&nbsp;
-			<button id ="toggle-password-field" class="small button alert"> Show Password </button>
-		</div>
-		<div class="large-12 columns">
-			<input type="submit" value="Log In" class="small button">
-		</div>
-	</form>
-	</div>
-</div>
-</div>
+<script src="/js/foundation.dropdown.js"></script>
+<script src="/js/foundation.section.js"></script>
+<!-- End of JS plugins for Foundation CSS -->
+
 </body>
+
+<!-- Initialize Foundation JS -->
+<script>
+  $(document).foundation();
+</script>
+
 </html>
