@@ -51,7 +51,7 @@ gem "leaflet-rails", "~> 0.4.4"
 # gem 'therubyracer', platforms: :ruby
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
