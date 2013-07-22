@@ -42,6 +42,8 @@ end
 gem 'bcrypt-ruby', '~> 3.0.0', require: "bcrypt"
 
 gem 'whenever', "~> 0.8.3"
+
+gem "leaflet-rails", "~> 0.4.4"
 # Use unicorn as the app server
 # gem 'unicorn'
 
