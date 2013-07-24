@@ -4,7 +4,7 @@ class CreateDataPoints < ActiveRecord::Migration
       t.string :tag
       t.string :title
       t.string :description
-      t.pubdate :date
+      t.date :pubdate
 
       t.timestamps
     end

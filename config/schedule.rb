@@ -1,8 +1,7 @@
 
 every 1.minute do 
 	runner "DataPoint.retrieve"
-	rake 
-	command 
+	 
 end
 
 
