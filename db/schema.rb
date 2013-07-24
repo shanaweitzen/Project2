@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20130722025217) do
   end
 
   create_table "data_points", force: true do |t|
-    t.string   "tag"
+    t.string   "countryid"
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.date     "pubdate"
     t.datetime "created_at"
     t.datetime "updated_at"

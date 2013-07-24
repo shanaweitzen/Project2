@@ -1,9 +1,9 @@
 class CreateDataPoints < ActiveRecord::Migration
   def change
     create_table :data_points do |t|
-      t.string :tag
+      t.string :countryid
       t.string :title
-      t.string :description
+      t.text :description
       t.date :pubdate
 
       t.timestamps
