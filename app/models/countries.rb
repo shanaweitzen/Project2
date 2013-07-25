@@ -3,15 +3,19 @@ class Countries < ActiveRecord::Base
 		require 'open-uri'
 		@response = open('http://www.state.gov/developer/geoPoliticalArea.json').read
 
-		require 'xmlsimple'
-		data = XmlSimple.xml_in(@response)
+		require 'json'
+		data = JSON.parse(@response)
 
-		data['channel'][0]['item'].each do |point|
-			Countries.create(identifier: point['identifier'].first.split(",").first)
+		data.each do |item|
+			Countries.create(
+				name: item['Name'],
+				countryid: item['Tag']
+		)
+
 		end #ends do
 	end # method
 end #class
 
 
 
-
+# data['Name'][0]['Tag'][0].each do |item 

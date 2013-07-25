@@ -5,6 +5,8 @@ class CreateDataPoints < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.date :pubdate
+      t.string :type
+      
 
       t.timestamps
     end

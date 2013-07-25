@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130722025217) do
+ActiveRecord::Schema.define(version: 20130725200818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "countries", force: true do |t|
     t.string   "name"
-    t.string   "tag"
+    t.string   "countryid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20130722025217) do
     t.string   "title"
     t.text     "description"
     t.date     "pubdate"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +37,13 @@ ActiveRecord::Schema.define(version: 20130722025217) do
     t.string   "email"
     t.string   "fish"
     t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "warnings", force: true do |t|
+    t.string   "name"
+    t.string   "countryid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

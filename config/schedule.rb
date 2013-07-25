@@ -1,8 +1,13 @@
 
 every 1.minute do 
-	runner "DataPoint.retrieve"
+	runner "DataPoint.retrieveAlerts"
 	 
 end
+
+every 1.minute do
+	runner "DataPoint.retrieveWarnings"
+end
+
 
 every 1.minute do 
 	runner "Countries.retrieveCountry"

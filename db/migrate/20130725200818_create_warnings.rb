@@ -1,6 +1,6 @@
-class CreateCountries < ActiveRecord::Migration
+class CreateWarnings < ActiveRecord::Migration
   def change
-    create_table :countries do |t|
+    create_table :warnings do |t|
       t.string :name
       t.string :countryid
 
