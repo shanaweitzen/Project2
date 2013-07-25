@@ -35,7 +35,7 @@ class DataPoint < ActiveRecord::Base
 				description: strip_tags(item['description'][0]), 
 				pubdate: item['pubDate'][0],
 				countryid: @identifier,
-				type: "warning"
+				level: "warning"
 			)
 		end									
 		@identifier
