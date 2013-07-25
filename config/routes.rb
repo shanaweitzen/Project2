@@ -12,8 +12,7 @@ Project2::Application.routes.draw do
   post "login" => "session#create"
   delete "logout" => "session#destroy"
   get "logout" => "session#destroy"
-  
-  
+  get "example" => "site#leaflet"
 
   resources :users
   
