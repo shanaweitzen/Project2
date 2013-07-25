@@ -41,6 +41,13 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0', require: "bcrypt"
 
+gem 'whenever', "~> 0.8.3"
+
+gem "leaflet-rails", "~> 0.6.2"
+
+
+
+gem "activesupport", "~> 4.0.0"
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -48,7 +55,12 @@ gem 'bcrypt-ruby', '~> 3.0.0', require: "bcrypt"
 # gem 'therubyracer', platforms: :ruby
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
+
+gem 'ox'
+
+gem 'xml-simple'
+
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
