@@ -14,7 +14,7 @@ class DataPoint < ActiveRecord::Base
 				title: item['title'][0], 
 				description: strip_tags(item['description'][0]), 
 				pubdate: item['pubDate'][0],
-				countryid: @identifier
+				countryid: @identifier,
 				type: "alert"
 			)
 		end									
@@ -34,7 +34,7 @@ class DataPoint < ActiveRecord::Base
 				title: item['title'][0], 
 				description: strip_tags(item['description'][0]), 
 				pubdate: item['pubDate'][0],
-				countryid: @identifier
+				countryid: @identifier,
 				type: "warning"
 			)
 		end									
