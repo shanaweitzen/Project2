@@ -2,31 +2,79 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#body {
-	background: #003031;
-}
-
-p {
-	color: #FFFFFF;
-	font-size: 12px;
-}
-
 h1 {
+	font-family: 'Acme', sans-serif;
+	color: #0099CC;
+}
+
+#header_bar {
+	background-image: url(world_names.jpg);
+	background-color: #000000;
+	color: #000000;
 	text-align: center;
-	color: #003031;
-	border: 20px solid white;
-	border-radius: 15px;
-	background-color: #FFFFFF;
+	font-family: 'Acme', sans-serif;
+}
+
+.small_button {
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.3);
+	color: #FFFFFF;
+	margin: auto;
+	padding: 10px;
+}
+
+#body {
+	background: #000000;
+	padding-top: 10px;
+}
+
+#orbit_slider {
+	border: 5px solid black;
+	width: 100%;
+	height: 50%;
+	margin: none;
+	// position: absolute;
+}
+
+.login_panel {
+	background-image: url(world_names.jpg);
+	position: relative;
+	float: right;
 }
 
 h2 {
 	color: #FFFFFF;
+	font-size: 24px;
+	text-align: center;
+	font-family: 'Armata', sans-serif;
 }
 
-#password_block {
+#lost_password {
+	color: #FFFFFF;
+	font-size: 16px;
+	text-align: center;
+	font-family: 'Armata', sans-serif;
+}
+
+p {
+	color: #FFFFFF;
+	font-size: 24px;
+	font-weight: bold; 
+	text-align: center;
+	font-family: 'Armata', sans-serif;
+}
+
+#email {
+	border-radius: 5px;
+}
+
+#password {
+	border-radius: 5px;	
+}
+
+.panel {
 	text-align: center;
 }
 
-#login_block {
-	text-align: right;
-}
+
+

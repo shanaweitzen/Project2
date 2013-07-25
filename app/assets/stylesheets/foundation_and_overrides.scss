@@ -815,7 +815,7 @@ $side-nav-list-position: inside;
 $side-nav-list-margin: 0 0 emCalc(7px) 0;
 
 // We use these to control link styles.
-$side-nav-link-color: $primary-color;
+$side-nav-link-color: #000000;
 $side-nav-link-color-active: lighten(#000, 30%);
 $side-nav-font-size: emCalc(14px);
 $side-nav-font-weight: bold;
@@ -972,7 +972,7 @@ $side-nav-divider-color: darken(#fff, 10%);
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
+$topbar-link-color: #fff;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 

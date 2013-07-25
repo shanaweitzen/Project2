@@ -1,119 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>	
+    <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="session.css.scss">
     <script src="/js/custom.modernizr.js"></script>
-		<link rel="stylesheet" href="session.css.scss">
 	</head>
 <body>
-  <div id="body">
+  <div id="header_bar">
     <div class="row">
-    <div class="small-12 columns">
-      <h1>Trek it!</h1>
-    <div class="small-3 large-9 columns">
-      <ul class="right button-group">
-      <li><a href="#" class="button">About Us</a></li>
-      <li><a href="#" class="button">API's</a></li>
-      <li><a href="#" class="button">Supported Countries</a></li>
-      </ul>
+    <div class="small-12 large-12 columns">
+      <h1>Navv It!</h1>
+    <div class="small-3 large-9 large-centered columns">
+      <div class="button_group">
+      <a href="#" class="small_button">About Us</a>
+      <a href="#" class="small_button">API's</a>
+      <a href="#" class="small_button">Supported Countries</a>
+      </div>
      </div>
     </div>
   </div>
+</div>
 <!-- End Header/Title -->
-
- <!-- Orbit Photo Slider Panel -->
+<div id="body">
+ <!-- Orbit Photo Slider Panel offset to left -->
 <div class="row">
-  <div class="large-8 columns">
-    <div class="panel">
-      <div id="orbit_slider">
-        <ul data-orbit>
-          <li>
-            <%= image_tag("peaceful_lake.jpg") %>
-            <div class="orbit-caption">Use Trek It No Matter Where You Are</div>
-          </li>
-          <li>
-            <%= image_tag("machu.jpg") %>
-            <div class="orbit-caption">Share Pictures and Notes with Friends and Family</div>
-          </li>
-          <li>
-            <%= image_tag("nice_dinner.jpg") %>
-            <div class="orbit-caption">Allow us to remember dinner recommendations!</div>
-          </li>
-        </ul>
-      </div>
+  <div class="large-12 small-12 columns">
+    <div id="orbit_slider">
+      <ul data-orbit>
+        <li>
+          <%= image_tag("earth_at_night.jpg") %>
+          <div class="orbit-caption">Use Trek It No Matter Where You Are</div>
+        </li>
+        <li>
+          <%= image_tag("old_color_map.jpg") %>
+          <div class="orbit-caption">Share Pictures and Notes with Friends and Family</div>
+        </li>
+        <li>
+          <%= image_tag("Kakadu.jpg") %>
+          <div class="orbit-caption">Allow us to remember dinner recommendations!</div>
+        </li>
+        <li>
+          <%= image_tag("LakeMcKenzie.jpg") %>
+          <div class="orbit-caption">Through space and time!</div>
+        </li>
+      </ul>
     </div>
   </div>
 
   <!-- End of Orbit Photo Slider Panel -->
 
-  <!-- Left-aligned sidebar Lost Password -->
-  <div class="small-12 large-2 columns">
+  <!-- Lost Password & Log In -->
+<div class="login_panel">
+  <div class="row">
+  <div class="large-4 columns">
     <h2>Lost password?</h2>
-    <p>
+    <br>
+    <p id="lost_password">
       Simply leave the password field blank, click the Log In button, and we'll send you a coded link via email allowing you to reset your password.
     </p>
     <br>
-    <p>Log In</p>                    
-    <form action="/login" method="POST">
-      <div class="small-12 large-2 columns">
-        <input type="text" id="email" name="email" placeholder="Email address" class="large-4 columns clear">
-      </div>
-      <div class="small-12 large-2 columns">
-        <input type="password" id="password" name="password" placeholder="Password" class="large-4 columns">&nbsp;
-      <button id ="toggle-password-field" class="small button alert"> Show Password </button>
-      </div>
-    <div class="small-12 large-2 columns">
-      <input type="submit" value="Log In" class="small button">
-    </div>        
-  </form>
   </div>
-</div>
-</div>
-
-  <!-- Three-up Content Blocks -->
- 
-	<div class="row">
-		<div class="large-4 columns">
-      <%= image_tag("Twilio.jpg") %>
-      <!-- <img src="http://placehold.it/400x300&text=[img]" /> -->
-      <h4>This is a content section.</h4>
-      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+  
+  <div class="large-4 columns">
+    <p>Log In</p>  
+    <form action="/login" method="POST"> 
+      <div class="row">                 
+        <div class="large-12 large-centered columns">
+          <input type="text" id="email" name="email" placeholder="Email address" class="large-12 columns clear">
+        </div>
+      </div>
+        <div class="row">
+          <div class="large-12 large-centered columns">
+            <input type="password" id="password" name="password" placeholder="Password" class="large-12 columns clear">&nbsp;
+          </div>
+      </div>
+        <div class="row">
+          <div class="large-6 large-centered columns">
+          <button id ="toggle-password-field" class="small button alert"> Show Password </button>
+          </div>
+        </div>
+          <div class="row">
+            <div class="large-4 large-centered columns">
+              <input type="submit" value="Log In" class="small button">
+            </div>  
+          </div> 
+          <br>
+  </div>
+  </div>
+</div>  
+             <!--    Evernote and FB icon placement -->
+<!--   <div class="row">
+    <div class="large-2 large-centered columns"><%= image_tag("Evernote_icon.jpg") %>
     </div>
-    
-    <div class="large-4 columns">
-    	<%= image_tag("Evernote_icon.jpg") %>
-      <!-- <img src="http://placehold.it/400x300&text=[img]" /> -->
-      <h4>This is a content section.</h4>
-      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-    </div>
-    
-    <div class="large-4 columns">
-      <%= image_tag("Facebook.jpg") %>
-      <!-- <img src="http://placehold.it/400x300&text=[img]" /> -->
-      <h4>This is a content section.</h4>
-      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-    </div>
-	
-    </div>
-    
-<!-- Call to Action Panel -->
-<div class="row">
+  
+      <div class="row">
+      <div class="large-3 large-centered columns"><%= image_tag("Facebook.jpg") %>
+      </div>
+    </div> 
+  </div>   -->   
+  </form
+  
+   
+<!-- Call to Action Panel
+<!-- <div class="row">
     <div class="large-12 columns">
     
       <div class="panel">
         <h4>Get in touch!</h4>
             
         <div class="row">
-          <div class="large-9 columns">
-            <p>We'd love to hear from you, you attractive person you.</p>
+          <div class="large-9 large-centered columns">
+            <p>We'd love to hear from you, you travel savvy person you.</p>
           </div>
           <div class="large-3 columns">
-            <a href="#" class="radius button right">Contact Us</a>
+            <a href="#" class="radius button center">Contact Us</a>
           </div>
         </div>
       </div>
       
     </div>
-  </div> 
+  </div>  --> 
 
 <!-- Check for Zepto support, load jQuery if necessary -->
 <script>
@@ -135,6 +142,7 @@
 <!-- Initialize Foundation JS -->
 <script>
   $(document).foundation();
+    data-orbit: 
 </script>
 
 </html>
