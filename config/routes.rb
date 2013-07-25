@@ -4,7 +4,7 @@ Project2::Application.routes.draw do
   
   resource :leaflet, only: [:application]
 
-  get "map" => "leaflet#application"
+  # get "map" => "leaflet#application" #controller#method model/view/controller
 
   resource :session , only: [ :new, :create, :destroy ]
   
