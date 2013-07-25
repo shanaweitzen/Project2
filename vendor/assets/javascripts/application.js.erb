@@ -1,3 +1,5 @@
+// require 'leaflet.js'
+
 $(document).ready(function(){  
    var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/{key}/22677/256/{z}/{x}/{y}.png',  
    cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 FirstFuel',  
@@ -6,3 +8,4 @@ $(document).ready(function(){
    latlng = new L.LatLng(<%= raw @lat.to_json %>,<%= raw @lng.to_json %>);  
    fsMap = new L.Map('map', {center: latlng, zoom:15, zoomControl:false, layers: [cloudmade], scrollWheelZoom : false});     
  });  
+

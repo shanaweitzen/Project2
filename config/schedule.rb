@@ -5,7 +5,7 @@ every 1.minute do
 end
 
 every 1.minute do 
-	runner "retrieveCountry"
+	runner "Countries.retrieveCountry"
 end
 
 # Use this file to easily define all of your cron jobs.
