@@ -40,5 +40,5 @@ class DataPointImporter
 			)
 		end									
 		@identifier
-	end
+	end	
 end
