@@ -1,11 +1,11 @@
 
 every 1.minute do 
-	runner "DataPoint.retrieveAlerts"
+	runner "DataPointImporter.retrieveAlerts"
 	 
 end
 
 every 1.minute do
-	runner "DataPoint.retrieveWarnings"
+	runner "DataPointImporter.retrieveWarnings"
 end
 
 
