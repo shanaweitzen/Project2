@@ -18,13 +18,17 @@ ActiveRecord::Schema.define(version: 20130722025217) do
 
   create_table "countries", force: true do |t|
     t.string   "name"
-    t.string   "countryid"
+    t.string   "alpha_2_code"
+    t.string   "alpha_3_code"
+    t.string   "numeric_code"
+    t.string   "latitude_average"
+    t.string   "longitude_average"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "data_points", force: true do |t|
-    t.string   "countryid"
+    t.string   "alpha_2_code"
     t.string   "title"
     t.text     "description"
     t.date     "pubdate"
