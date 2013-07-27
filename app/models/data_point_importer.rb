@@ -15,7 +15,7 @@ class DataPointImporter
 				title: item['title'][0], 
 				description: strip_tags(item['description'][0]), 
 				pubdate: item['pubDate'][0],
-				countryid: @identifier,
+				alpha_2_code: @identifier,
 				level: "alert"
 			)
 		end									
@@ -35,10 +35,10 @@ class DataPointImporter
 				title: item['title'][0], 
 				description: strip_tags(item['description'][0]), 
 				pubdate: item['pubDate'][0],
-				countryid: @identifier,
+				alpha_2_code: @identifier,
 				level: "warning"
 			)
 		end									
 		@identifier
-	end
+	end	
 end
