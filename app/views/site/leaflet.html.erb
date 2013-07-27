@@ -1,0 +1,27 @@
+<head>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+	<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+	<![endif]-->
+	<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+</head>
+
+<body>
+	<div id="map"></div>
+		<script type='text/javascript'>  
+		var map = L.map('map',{
+    	zoomAnimation: true
+		});
+
+		L.tileLayer('http://b.tile.cloudmade.com/6bb82f6e0733473698298dc3a8287ee0/7/256/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+		}).addTo(map);
+
+		map.fitWorld().zoomIn();
+
+		map.on('resize', function(e) {
+    	map.fitWorld({reset: true}).zoomIn();
+		});
+		</script>
+</body> 
