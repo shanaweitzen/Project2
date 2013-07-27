@@ -13,7 +13,7 @@ Project2::Application.routes.draw do
   delete "logout" => "session#destroy"
   get "logout" => "session#destroy"
   get "example" => "site#leaflet"
-
+  
   resources :users
   
   root 'site#index'
