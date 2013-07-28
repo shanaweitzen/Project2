@@ -43,7 +43,7 @@ gem 'bcrypt-ruby', '~> 3.0.0', require: "bcrypt"
 
 gem 'whenever', "~> 0.8.3"
 
-gem "leaflet-rails", "~> 0.6.2"
+# gem "leaflet-rails", "~> 0.6.2"
 
 
 
