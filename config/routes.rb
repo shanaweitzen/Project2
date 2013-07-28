@@ -1,10 +1,6 @@
 Project2::Application.routes.draw do
   get "privacy" => "site#privacy"
-  get "terms" => "site#terms"
-  
-  resource :leaflet, only: [:application]
-
-  
+  get "terms" => "site#terms"  
 
   resource :session , only: [ :new, :create, :destroy ]
   
@@ -12,13 +8,19 @@ Project2::Application.routes.draw do
   post "login" => "session#create"
   delete "logout" => "session#destroy"
   get "logout" => "session#destroy"
-  get "example" => "site#leaflet"
   
-  resources :users
+  resource :site, only: [:application]
+  get "example" => "site#google_maps"
+  post "example" => "site#google_maps"
+  # resources :users
   
+<<<<<<< HEAD
   root 'site#index'
 
   
+=======
+  # root 'site#index'
+>>>>>>> f95852632547d639d8599201b54a77a59d286479
 end
 
 
