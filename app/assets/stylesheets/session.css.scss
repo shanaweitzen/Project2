@@ -3,21 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h1 {
-	font-family: 'Love Ya Like A Sister', cursive;
-	color: #FFFFFF;
-	font-weight: bold;
-	font-size: 30px;
+	font-family:'Armata', sans-serif;
+	color: black;
+	font-weight: 2px ;
+	font-size: 50px;
 }
-
+header{
+	// background-image:url("map.png") ;
+	background-color: #606060;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+}
 #header_bar2 {
-	background-image: url(compass_dark_wide.png);
+	/*background-image: url(compass_dark_wide.png)*/;
 	background-repeat: repeat;
 	width: 100%;
 	height: 68px;
 	
 	color: #FFFFFF;
 	text-align: center;
-	font-family: 'Love Ya Like A Sister', cursive;
+	font-family:'Armata', sans-serif;
 }
 
 .small_button {
@@ -29,11 +36,16 @@ h1 {
 }
 
 #body {
-	background-color: #F5FAFA;
-	// background: #000000;
+	/*background-color: #F5FAFA;#000000*/
+	background: white;
 	padding-top: 10px;
+	background-image:url("worldmapbackground.png");
 }
-
+.it{
+	font-family: 'Armata', sans-serif;
+	font-size: 45px;
+	font-weight: 2px;
+}
 #orbit_slider {
 	// border: 5px solid black;
 	width: 100%;
@@ -43,23 +55,24 @@ h1 {
 }
 
 .login_panel {
-	// background-image: url(world_names.jpg);
+	/*// background-image: url(world_names.jpg);*/
 	position: relative;
-	float: right;
+	// float: right;
+	margin:50px auto;
 }
 
 h2 {
 	color: #000000;
 	font-size: 24px;
 	text-align: center;
-	font-family: 'Love Ya Like A Sister', cursive;
+	font-family: 'Armata', sans-serif;
 }
 
 #lost_password {
 	color: #000000;
 	font-size: 16px;
 	text-align: center;
-	font-family: 'Love Ya Like A Sister', cursive;
+	font-family: 'Armata', sans-serif;
 }
 
 p {
@@ -67,7 +80,7 @@ p {
 	font-size: 24px;
 	font-weight: bold; 
 	text-align: center;
-	font-family: 'Love Ya Like A Sister', cursive;
+	font-family: 'Armata', sans-serif;
 }
 
 #email {
