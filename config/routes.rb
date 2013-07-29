@@ -9,18 +9,19 @@ Project2::Application.routes.draw do
   delete "logout" => "session#destroy"
   get "logout" => "session#destroy"
   
-  resource :site, only: [:application]
-  get "example" => "site#google_maps"
-  post "example" => "site#google_maps"
+  # resource :site, only: [:application]
+  # get "example" => "site#google_maps"
+  # post "example" => "site#google_maps"
+
+  resource :site, only:[:application]
+
+  get "map" => "site#leaflet"
+  post "map" => "site#leaflet"
   # resources :users
   
-<<<<<<< HEAD
+
   root 'site#index'
 
-  
-=======
-  # root 'site#index'
->>>>>>> f95852632547d639d8599201b54a77a59d286479
 end
 
 
