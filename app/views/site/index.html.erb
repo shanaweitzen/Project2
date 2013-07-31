@@ -28,26 +28,34 @@
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
- 	<% @data_points = DataPoint.all %>
-	<% @data_points.each do |dp| %>
-	  	<% @country_code = dp.alpha_2_code %>
-	  	<% @country = Country.find_by(alpha_2_code: @country_code) %> 
-	  	<% if @country %>
-		  	<% @lat = @country.latitude_average %>
-		  	<% @lng = @country.longitude_average %>
-		 <% @level = dp.level %>
-		  	<% if @level == 'alert' %>
-				console.log("<%= @level %>")
-				 
-				 L.marker([<%= @lat %>, <%= @lng %>],{ icon: redMarker}).addTo(map);
+	 	<% @data_points = DataPoint.all %>
+		<% @data_points.each do |dp| %>
+			  	<% @country_code = dp.alpha_2_code %>
+			  	<% @country = Country.find_by(alpha_2_code: @country_code) %> 
+			 <% if @country %>
+			  	<% @lat = @country.latitude_average %>
+			  	<% @lng = @country.longitude_average %>
+			 	<% @level = dp.level %>
+			<% if @level == 'alert' %>
+					console.log("<%= @level %>")
+				<% @title = dp.title %>
+					console.log("<%= @title %>")
+
+					 L.marker([<%= @lat %>, <%= @lng %>],{ icon: redMarker}).addTo(map)
+					 .bindPopup("<%= @title %>")
+	    			.openPopup();
 			<% else %>
-				console.log("<%= @level %>")
-				 L.marker([<%= @lat %>, <%= @lng %>],{ icon: blueMarker}).addTo(map);
-				// L.marker([<%= @lat %>, <%= @lng %>]).addTo(map);
-			<% end %>
-		    // L.marker([<%= @lat %>, <%= @lng %>],<%= @level %>).addTo(map);
-	    <% end %>
-	<% end %>
+					<% @title = dp.title %>
+					console.log("<%= @level %>")
+					console.log("<%= @title %>")
+					 L.marker([<%= @lat %>, <%= @lng %>],{ icon: blueMarker}).addTo(map)
+					 .bindPopup("<%= @title %>")
+					 .openPopup();
+					
+				<% end %>
+			    
+		    <% end %>
+		<% end %>
 
 });
 
