@@ -46,10 +46,17 @@ margin: 10px auto;
 
 }
 #container{
-	// background-image: url(planeoriginal.png);
+	// background-image: url("threesail.png");
+	margin: 0 auto;
 	
 
 	/*module */
+}
+.image{
+	margin-left: 550px;
+	margin-top: 300px;
+	padding-left: 10px;
+	background-image-height:300px;
 }
 #header_bar2 {
 	/*background-image: url(compass_dark_wide.png)*/;
@@ -72,14 +79,26 @@ margin: 10px auto;
 
 #body {
 	background-color: black;
+	background-image:url("threesail.png");
+	background-repeat: no-repeat;
 
-
-	padding-top: 10px;
-	// background-image:url("planeoriginal.png");
+	margin-left:100px;
+	// background-image:url("countries.png");
 	height:100%;
 	width: 100%;
 	
 }
+// #background{
+// 	background-image:url("planes.png");
+// 	background-repeat: no-repeat;
+	
+// 	border-top-color: white;
+// 	border-width: 10px;
+// 	margin-left: 200px;
+// 	margin-top: 100px;
+// 	height: 950px;
+// 	width: 950px;
+// }
 .it{
 	font-family: "Rokkitt", Georgia, "Times New Roman", Times, serif;
 	font-size: 40px;

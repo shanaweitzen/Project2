@@ -1,6 +1,8 @@
 class SiteController < ApplicationController
-	before_action :is_authenticated, only: [ :index ]
+	# before_action :is_authenticated, only: [ :index ]
+  
   def index
+    
   end
 
   def privacy
@@ -8,5 +10,4 @@ class SiteController < ApplicationController
 
   def terms
   end
-
 end

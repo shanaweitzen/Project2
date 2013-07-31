@@ -4,5 +4,7 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
+//= require leaflet-src
+//= require leaflet.awesome-markers
 
 $(document).foundation();

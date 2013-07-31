@@ -15,15 +15,17 @@
   <!-- 
 -->
 <body id="body">
+  
+  <div id="background">
   <!-- <div class ="navbar"> -->
     <div class="row">
-      <div class="small-2 push-10 columns"><h5>Log in</h5><h5>Sign up</h5></div>
+      <!-- <div class="small-2 push-10 columns"><h5>Log in</h5><h5>Sign up</h5></div> -->
       <div class="small-10 pull-3 columns"><h1>Navv<span>it</span></h1></div> 
      
     </div>
 
     <div class="container">
-     <div><%= image_tag("planeoriginal.png") %></div>
+     
       <!-- <h2></h2>
        -->
     </div>
@@ -35,7 +37,44 @@
   </div>
 </div> -->
 
-
+<div class="login_panel">
+  <div class="row">
+  <div class="large-4 columns">
+    <!-- <h2>Lost password?</h2> -->
+    <br>
+    <!-- <p id="lost_password">
+      Simply leave the password field blank, click the Log In button, and we'll send you a coded link via email allowing you to reset your password.
+    </p> -->
+    <br>
+  </div>
+  
+  <div class="large-4 columns">
+    <p>Log In</p>  
+    <form action="/login" method="POST"> 
+      <div class="row">                 
+        <div class="large-12 large-centered columns">
+          <input type="text" id="email" name="email" placeholder="Email address" class="large-12 columns clear">
+        </div>
+      </div>
+        <div class="row">
+          <div class="large-12 large-centered columns">
+            <input type="password" id="password" name="password" placeholder="Password" class="large-12 columns clear">&nbsp;
+          </div>
+      </div>
+        <div class="row">
+          <div class="large-6 large-centered columns">
+          <button id ="toggle-password-field" class="small button alert"> Show Password </button>
+          </div>
+        </div>
+          <div class="row">
+            <div class="large-4 large-centered columns">
+              <input type="submit" value="Log In" class="small button">
+            </div>  
+          </div> 
+          <br>
+  <!-- </div> -->
+  </div>
+</div>  
     <!-- ends container
     
   
@@ -43,6 +82,9 @@
         <p class="copyright">© 2013 All rights reserved Erin and Shana</p>
   </footer> -->
 
+
+
+</div>
 </body>
 
 

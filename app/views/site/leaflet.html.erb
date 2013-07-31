@@ -1,55 +1,23 @@
-<!DOCTYPE html>
-<head>
-	 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
- <!--[if lte IE 8]>
-     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
- <![endif]-->
- 
- <link rel="stylesheet" src="stylesheets/leaflet.css">
- <script type="text/javascript" href="lealflet.js"></script>
-
- <!-- <script src="leaflet.geocsv.js"></script> -->
- <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
- 
  <script type="text/javascript">
- window.onload = function(){
- 	//everything for our app goes here
- 	var map = L.map('map').fitWorld();
- 	//setView([51.505, -0.09], 13);
+  $(function(){
+
+ 	var map = L.map('map').setView([51.505, -0.09], 3);
  	
  	L.tileLayer('http://a.tile.cloudmade.com/6bb82f6e0733473698298dc3a8287ee0/7/256/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
- 			// L.tileLayer('http://a.tile.cloudmade.com/6bb82f6e0733473698298dc3a8287ee0/7/256/{z}/{x}/{y}.png', {
-			 //    attribution: '&copy; <a href="http://cloudmade.com/copyright">CloudMade</a> contributors',
-			    
-	// L.marker([51.5, -0.09]).addTo(map)
-// 	L.geoCsv(null,{
-// 	  titles: ['lat', 'lng', 'popup', 'level'],
-// 	  fieldSeparator: ';',
-// 	  lineSeparator: '\n',
-// 	  deleteDobleQuotes: true,
-// 	  firstLineTitles: false,
-// 	  onEachFeature: function (feature, layer) {
-// 	    var popup = '';
-// 	    for (var clave in feature.properties) {
-// 	      var title = geo_csv.getPropertyTitle(clave);
-// 	      popup += '<b>'+title+'</b><br />'+feature.properties[clave]+'<br /><br />';
-// 	    }
-// 	    layer.bindPopup(popup);
-//   }
-// });
-}
- </script>
+  }).addTo(map);
 
+ 	<% @data_points = DataPoint.all %>
+	<% @data_points.each do |dp| %>
+  	<% @country_code = dp.alpha_2_code %>
+  	<% @country = Country.find_by(alpha_2_code: @country_code)%> 
+  	<% @lat = country.latitude_average %>
+  	<% @lng = country.longitude_average %>
+    L.marker([<%= @lat %>, <%= @lng %>]).addTo(map);
+	<% end %>
 
-</head>
-<body>
-	 <div id="map">
+});
 
+</script>
 
-
-
-</div>
-</body>
-</html>
+<div id="map"></div>
