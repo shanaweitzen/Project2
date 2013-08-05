@@ -1,7 +1,7 @@
 class DataPointImporter
 	include ActionView::Helpers
 
-	def retrieveAlerts # returns the travel alerts issued by the state department as a hash 
+	def self.retrieveAlerts # returns the travel alerts issued by the state department as a hash 
 		require 'open-uri'
 		@response = open('http://travel.state.gov/_res/rss/TAs.xml').read #retrieves the travel alerts from state dept 
 
@@ -20,7 +20,7 @@ class DataPointImporter
 		end
 	end
 
-	def retrieveWarnings # returns the travel alerts issued by the state department as a hash 
+	def self.retrieveWarnings # returns the travel alerts issued by the state department as a hash 
 		require 'open-uri'
 		@response = open('http://travel.state.gov/_res/rss/TWs.xml').read #retrieves the travel alerts from state dept 
 

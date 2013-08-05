@@ -1,28 +1,17 @@
-
-
-
 <script type="text/javascript">
+
   $(function(){
-// var redMarker = L.AwesomeMarkers.icon({
-//   icon: 'spinner', 
-//   color: 'red',
-//   spin: true
-// })
+
  	var map = L.map('map').setView([51.505, -0.09], 3);
 
- 	var redMarker = L.icon({
+ 	var blueMarker = L.icon({
    		icon: 'flag', 
 		color: 'red',
 	    iconSize: [34, 40], 
 		iconUrl : 'http://icon-park.com/imagefiles/location_map_pin_attention_light_blue.png'
  	})
  	
- 	var blueMarker = L.icon({
- 		icon: 'flag', 
-		color: 'blue',
-	    iconSize: [33, 45], 
-		iconUrl : 'http://icon-park.com/imagefiles/location_map_pin_red3.png'
-		 	})
+ 	
  	
  	L.tileLayer('http://a.tile.cloudmade.com/6bb82f6e0733473698298dc3a8287ee0/7/256/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -32,6 +21,8 @@
 		<% @data_points.each do |dp| %>
 			  	<% @country_code = dp.alpha_2_code %>
 			  	<% @country = Country.find_by(alpha_2_code: @country_code) %> 
+			 	<% if !@country then puts dp.alpha_2_code; puts dp.title end %>
+
 			 <% if @country %>
 			  	<% @lat = @country.latitude_average %>
 			  	<% @lng = @country.longitude_average %>
@@ -40,25 +31,44 @@
 					console.log("<%= @level %>")
 				<% @title = dp.title %>
 					console.log("<%= @title %>")
+				<% @description = dp.description %>
+					
 
-					 L.marker([<%= @lat %>, <%= @lng %>],{ icon: redMarker}).addTo(map)
-					 .bindPopup("<%= @title %>")
+					 L.marker([<%= @lat %>, <%= @lng %>],{ icon: blueMarker}).addTo(map)
+					 .bindPopup('<%= @title %><a data-toggle="modal" href="#description_<%= dp.id %><br>">read more</a>')
 	    			.openPopup();
 			<% else %>
 					<% @title = dp.title %>
 					console.log("<%= @level %>")
 					console.log("<%= @title %>")
-					 L.marker([<%= @lat %>, <%= @lng %>],{ icon: blueMarker}).addTo(map)
-					 .bindPopup("<%= @title %>")
+					 L.marker([<%= @lat %>, <%= @lng %>]).addTo(map)
+					 .bindPopup('<%= @title %> <a data-toggle="modal" href="#description_<%= dp.id %><br>">read more</a>')
 					 .openPopup();
 					
 				<% end %>
-			    
+	
+					  
 		    <% end %>
 		<% end %>
 
 });
 
 </script>
+<!-- Modal <-->			
+					<% @data_points.each do |dp| %>
+					  <div class="modal fade" id="description_<%= dp.id %>">
+					    <div class="modal-dialog">
+					      <div class="modal-content">
+					        <div class="modal-header">
+					          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					          <h4 class="modal-title"><%= dp.title %></h4>
+					        </div>
+					        <div class="modal-body">
+					          <%= dp.description %>
+					        </div>
+					      </div><!-- /.modal-content -->
+					    </div><!-- /.modal-dialog -->
+					  </div><!-- /.modal -->
+<% end %>
 
 <div id="map"></div>
